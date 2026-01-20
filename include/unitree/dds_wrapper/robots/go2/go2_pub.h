@@ -123,6 +123,15 @@ public:
   }
 };
 
+class HeightMap : public RealTimePublisher<unitree_go::msg::dds_::HeightMap_>
+{
+public:
+  HeightMap(std::string topic = "rt/heightmap")
+  : RealTimePublisher<MsgType>(topic) 
+  {
+  }
+};
+
 } // namespace publisher
 } // namespace go2
 } // namespace robot
